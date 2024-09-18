@@ -1,0 +1,34 @@
+include "TriggerLibs/NativeLib"
+
+include "LibA238E3DA_h"
+
+//--------------------------------------------------------------------------------------------------
+// Library: misc_functions
+//--------------------------------------------------------------------------------------------------
+// External Library Initialization
+void libA238E3DA_InitLibraries () {
+    libNtve_InitVariables();
+}
+
+// Functions
+int libA238E3DA_gf_player_row (int lp_player) {
+    // Automatic Variable Declarations
+    // Implementation
+    return (lp_player + 1);
+}
+
+//--------------------------------------------------------------------------------------------------
+// Library Initialization
+//--------------------------------------------------------------------------------------------------
+bool libA238E3DA_InitLib_completed = false;
+
+void libA238E3DA_InitLib () {
+    if (libA238E3DA_InitLib_completed) {
+        return;
+    }
+
+    libA238E3DA_InitLib_completed = true;
+
+    libA238E3DA_InitLibraries();
+}
+
